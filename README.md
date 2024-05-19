@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Poc tosspayments  
 
-## Getting Started
 
-First, run the development server:
+## install
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+yarn add @tosspayments/payment-sdk  
+
+# 참고) 결제 위젯 > https://docs.tosspayments.com/guides/payment-widget/overview  
+- 노코드 툴로 관리가 가능하다. 하지만 테스트를 위해 사업자 등록증이 필요
+yarn add @tosspayments/payment-widget-sdk
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ref  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[toss payments 개발자 센터](https://developers.tosspayments.com/)
+[toss payments 결제 API 문서](https://docs.tosspayments.com/reference)
+[결제위젯 Next.js 샘플 프로젝트](https://github.com/tosspayments/payment-widget-sample/blob/main/nextjs/README.md)
+[Youtbue - NextJs 결제연동하기 (feat. Toss/토스페이먼츠)](https://www.youtube.com/watch?v=lpfO2mebYQk)

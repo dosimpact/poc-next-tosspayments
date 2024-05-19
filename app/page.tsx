@@ -8,9 +8,9 @@ export default function Page() {
     );
 
     await tossPayments.requestPayment("카드", {
-      amount: 5000,
+      amount: 1000,
       orderId: Math.random().toString(36).slice(2),
-      orderName: "맥북",
+      orderName: "새우깡",
       successUrl: `${window.location.origin}/api/payments`,
       failUrl: `${window.location.origin}/api/payments/fail`,
     });

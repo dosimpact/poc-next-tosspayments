@@ -19,8 +19,6 @@ const CompletePage = async (props: CompletePageProps) => {
     },
   }).then((res) => res.json());
 
-  console.log("-->payments", payments);
-
   const { card } = payments;
 
   return (

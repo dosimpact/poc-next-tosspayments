@@ -1,12 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { redirect } from "next/navigation";
 
-// http://dosimpact-2.iptime.org:13000/api/payments?orderId=xx2pk175o6d&paymentKey=tviva20240519150451xH8N7&amount=5000
+// http://localhost:3000/api/payments?orderId=xx2pk175o6d&paymentKey=tviva20240519150451xH8N7&amount=5000
 export const GET = async (req: NextRequest, params: any) => {
-  console.log(">>params", params);
-
   const searchParams = req.nextUrl.searchParams;
-  console.log(">>searchParams", searchParams);
 
   const orderId = searchParams.get("orderId");
   const paymentKey = searchParams.get("paymentKey");
@@ -15,6 +12,8 @@ export const GET = async (req: NextRequest, params: any) => {
 
   const url = "https://api.tosspayments.com/v1/payments/confirm";
   const basicToken = Buffer.from(`${secretKey}:`, "utf-8").toString("base64");
+
+  // TODO: DB Sync 처리
 
   await fetch(url, {
     method: "post",
@@ -29,13 +28,5 @@ export const GET = async (req: NextRequest, params: any) => {
     },
   }).then((res) => res.json());
 
-  // TODO: DB 처리
-
   return redirect(`/payments/complete?orderId=${orderId}`);
-  //   res.redirect(`/payments/complete?orderId=${orderId}`);
-
-  // json resposne
-  //   return NextResponse.json({
-  //     hello: "true",
-  //   });
 };
